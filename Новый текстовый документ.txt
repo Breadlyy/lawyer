@@ -1,0 +1,41 @@
+  <form action="" method="post"></form>
+    <div style="float: left; width: 40%;">
+        <textarea style="margin-left: 500px; margin-top:30px" type="text" name="name" class="form-control" id="name" placeholder="Name"></textarea>
+        <textarea style="margin-left: 810px; margin-top:30px" type="text" name="password" class="form-control" id="password" placeholder="Password"></textarea>
+        <br>
+        <textarea style="margin-left: 500px;" type="text" name="email" class="form-control" id="login" placeholder="Email"></textarea>
+    </div>
+    <div style="float: right; width: 40%;">
+        <textarea style="margin-right: 180px; margin-top:30px" type="text" name="lastname" class="form-control" id="login" placeholder="Last Name"></textarea>
+        <br><br><br>
+        <textarea style="margin-right: 220px; margin-top:30px" type="text" name="number" class="form-control" id="login" placeholder="Phone nubmer"></textarea>
+    </div>
+</form>
+    <div style="text-align: center; padding-top:200px">
+       
+        <textarea type="text" name="Message" class="form-control" id="message" placeholder="Message"></textarea>
+        <br>
+        <button class="bth-reg" id="button-reg" type="submit">Registrate</button>
+    </div>
+
+textarea[name="Message"] {
+    height: 180px;
+    width: 870px;
+    border-color: #ccff00;
+    resize: none;
+}
+
+    <form class="modal-content animate" action="../check.php; action_page.php " method="post">
+        <div style="margin-top:50px">
+            <input style="width: 300px; font-size: 17px; border-color: #ccff00; height:30px;" type="text" name="name" id="name" placeholder="Name">
+            <br><br>
+            <input style="width: 300px; font-size: 17px; border-color: #ccff00; height:30px;" type="text" name="last_name" id="last_name" placeholder="Last Name">
+            <br><br>
+            <input style="width: 300px; font-size: 17px; border-color: #ccff00; height:30px;" type="text" name="email" id="email" placeholder="Email">
+            <br><br>
+            <input style="width: 300px; font-size: 17px; border-color: #ccff00; height:30px;" type="text" name="phone" id="phone" placeholder="Phone nubmer">
+            <br><br>
+            <input style="width: 300px; font-size: 17px; border-color: #ccff00; height:30px;" type="text" name="pass" id="pass" placeholder="Password">
+            <br><br>
+            <button class="btn btn-success" name="button" id="button-reg" type="submit">Registrate</button>
+        </div>
