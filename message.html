@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <div id="logo">
+        <img src="images/logo.png" alt="Логотип">
+    </div>
+</head>
+
+<body>
+    <div id="navWrap">
+        <a href="messahe.html">Main page</Main></a>
+        <a href="about.html">About us</a>
+        <a href="staff.html">Office staff</a>
+        <a href="Location.html">Location</a>
+    </div>
+    <p class="inscription">Describe your problem</p>
+    <form id="form_message" method="post">
+        <div>
+            <textarea id="message" class="text_form" placeholder="Message" required></textarea>
+            <br>
+            <div class="control-file">
+                <label for="fileFF">Прикрепить файл:</label>
+                <input id="fileFF" name="fileFF" type="file">
+            </div>
+            <button type="submit">Send</button>
+        </div>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</body>
+
+</html>

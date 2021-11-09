@@ -9,7 +9,6 @@ $mysql = new mysqli('localhost','root','345','users-bd');
 $result =$mysql->query("SELECT * FROM `reg-users` WHERE `email` = '$email' AND 
 `pass` = '$pass' ");
 $user = $result->fetch_assoc();
-
 if(count($user) == 0)
 {
     echo "user does not exist";

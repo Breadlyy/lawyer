@@ -92,19 +92,54 @@ html {
 
 /* -------------------- НАЧАЛО стилей для страницы "Mainpage"--------------------- */
 
-input {
-    font-size: 17px;
-    height: 25px;
-    width: 350px;
-    border-color: #ccff00;
+#inscription {
+    font-family: HelveticaThin;
+    font-size: 30px;
+    color: rgb(40, 82, 40);
+    text-align: center;
+    padding-top: 65px
 }
 
-#button-reg {
-    background-color: rgb(197, 214, 81);
-    margin-right: 698px;
-    margin-top: 40px;
-    width: 150px;
-    height: 55px;
+
+/* -------------------- НАЧАЛО стилей для страницы "message"--------------------- */
+
+.inscription {
+    font-family: HelveticaThin;
     font-size: 30px;
-    font-family: "HelveticaThin", sans-serif;
+    color: rgb(40, 82, 40);
+    text-align: center;
+    padding-top: 65px;
+    margin-left: 50px;
+}
+
+#form_message {
+    text-align: center;
+}
+
+.text_form {
+    width: 650px;
+    font-size: 18px;
+    border-color: #ccff00;
+    border: 1px solid #ccc;
+    border-color: #ccff00;
+    margin-left: 40px;
+    height: 170px;
+    resize: none;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+button[type="submit"] {
+    background-color: rgb(197, 214, 81);
+    color: white;
+    border: 1px solid #ccc;
+    border-color: #ccff00;
+    margin-top: 30px;
+    width: 120px;
+    height: 45px;
+    font-size: 20px;
+}
+
+::-webkit-input-placeholder {
+    margin-bottom: 180px;
 }
