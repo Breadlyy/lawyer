@@ -15,7 +15,7 @@ var fields = document.getElementsByClassName("field");
 
 
 
-form.addEventListener('onclick', (e) => {
+/*form.addEventListener("onclick", (e) => {
     e.preventDefault()
     for (var i = 0; i < fields.length; i++) {
         if (!fields[i].value) {
@@ -39,7 +39,7 @@ form.addEventListener('onclick', (e) => {
     }
 
 
-})
+})*/
 
 function validateEmail(email) {
     return regex_email.test(email);
@@ -120,23 +120,4 @@ function Validate() {
         }
     }
 }
-setTimeout(Validate, 2000)
-
-$(function() {
-    document.getElementById('form_message').addEventListener('submit', function(evt) {
-        var http = new XMLHttpRequest(),
-            f = this;
-        evt.preventDefault();
-        http.open("POST", "contact.php", true);
-        http.onreadystatechange = function() {
-            if (http.readyState == 4 && http.status == 200) {
-                alert(http.responseText);
-            }
-        }
-        http.onerror = function() {
-            alert('Ошибка, попробуйте еще раз');
-        }
-        http.send(new FormData(f));
-    }, false);
-
-});
+setTimeout(Validate, 2000);

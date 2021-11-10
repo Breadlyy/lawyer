@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+   <script src="email.js"></script>
     <div id="logo">
         <img src="images/logo.png" alt="Логотип">
     </div>
@@ -75,7 +77,7 @@
          background-color: #c5d651;
          margin-left: 880px;
         }
-        #log_1 {
+        #button_log {
          width: 100%;
          background-color: #c5d651; 
         }
@@ -193,34 +195,30 @@
     </div>
     <!-- Registration form -->
     <div id="error"></div>
-     <form id="form" class="form text-form" enctype="multipart/form-data"  action="check.php" method="POST">
+     <form id="form" class="form text-form" action="check.php" method="POST">
             <div style="margin-top:50px" >
-                <input type="text-form"  class="field" name="name" id="name" placeholder="Name">
+                <input type="text-form" class="field" name="name" id="name" placeholder="Name">
                 <span type="span_error" id = "error_name"></span>
                 <br><br>
-                <input type="text-form"   class="field" name="last_name" id="last_name" placeholder="Last Name" >
+                <input type="text-form" class="field" name="last_name" id="last_name" placeholder="Last Name" >
                 <span type="span_error" id = "error_last_name"></span>
                 <br><br>
-                <input type="text-form"   class="field" name="email" id="email" placeholder="Email" >
+                <input type="text-form" class="field" name="email" id="email" placeholder="Email" >
                 <span type="span_error" id = "error_email"></span>
                 <br><br>
-                <input type="text-form"   class="field" name="phone" id="phone" placeholder="Phone nubmer" >
+                <input type="text-form" class="field" name="phone" id="phone" placeholder="Phone nubmer" >
                 <span type="span_error" id = "error_phone"></span>
                 <br><br>
-                <input type="text-form"   class="field" name="pass" id="pass" placeholder="Password" >
+                <input type="text-form" class="field" name="pass" id="pass" placeholder="Password" >
                 <span type="span_error" id = "error_pass"></span>
+                <br><br>
+                <textarea id="message" name="message" class="text_form" placeholder="Message" required></textarea>
                 <br>
-                <textarea id="message" class="text_form" placeholder="Message" required></textarea>
-            <br>
-            <div class="control-file">
-                <label for="fileFF">Прикрепить файл:</label>
-                <input id="fileFF" name="fileFF" type="file">
+              <button class='registrate' type="submit" name="button" id="button_reg">Registrate</button>
             </div>
-              <button class='registrate' type="submit" name="button" id="button_reg" >Registrate</button>
-            </div>
+            <div class="status"></div>
      </form>
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     <script  src="script.js"></script>
+     <script src="script.js"></script>
     <button type="btn" id="login" onclick="document.getElementById('log_window').style.display = 'block'" >Login</button>
     
  <!-- Login form -->
@@ -238,7 +236,7 @@
                 <label for="pass"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="pass" required>
 
-                <button id="log_1" type="btn" type="submit">Login</button>
+                <button id="button_log" type="btn" type="submit">Login</button>
                 
             </div>
         </form>

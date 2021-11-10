@@ -32,4 +32,24 @@ VALUES('$name','$last_name','$email','$phone','$pass')");
 $mysql->close();
 
 header('Location: message.html');
+$name = $_POST['name'];
+$surname = $_POST['last_name'];
+$phone = $_POST['phone'];
+$email = $_POST['email'];
+$text = $_POST['message'];
+
+$to = "kirill.lozanov69@gmail.com"; 
+$date = date ("d.m.Y"); 
+$time = date ("h:i");
+$from = $email;
+$subject = "Заявка c сайта";
+
+
+$msg="
+Имя: $name /n
+Фамилия: $surname /n
+Телефон: $phone /n
+Почта: $email /n
+Текст: $text"; 	
+mail($to, $subject, $msg, "From: $from ");
 ?>
