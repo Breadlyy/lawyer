@@ -30,26 +30,21 @@ $mysql = new mysqli('localhost','root','345','users-bd');
 $mysql->query("INSERT INTO`reg-users`(`Name`, `Last_Name`, `email`, `phone`,`pass`)
 VALUES('$name','$last_name','$email','$phone','$pass')");
 $mysql->close();
-
-header('Location: message.html');
-$name = $_POST['name'];
-$surname = $_POST['last_name'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
-$text = $_POST['message'];
-
+ 
 $to = "kirill.lozanov69@gmail.com"; 
-$date = date ("d.m.Y"); 
-$time = date ("h:i");
 $from = $email;
 $subject = "Заявка c сайта";
+$url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$text = "Здравствуйте, $name вы были успешно зарегестрированы на сайте адвокатской конторы Лозанова Виктора($url)\n Теперь вы можете написать о вашей проблеме на нашем сайте(по необходимости можно прикрепить файл)";
 
-
-$msg="
-Имя: $name /n
-Фамилия: $surname /n
-Телефон: $phone /n
-Почта: $email /n
+$msg=" 
+Имя: $name 
+Фамилия: $last_name
+Телефон: $phone 
+Почта: $email 
 Текст: $text"; 	
-mail($to, $subject, $msg, "From: $from ");
+mail($to, $subject, $msg, $from);
+
+header('Location: message.html');
+
 ?>

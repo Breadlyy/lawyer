@@ -212,9 +212,7 @@
                 <input type="text-form" class="field" name="pass" id="pass" placeholder="Password" >
                 <span type="span_error" id = "error_pass"></span>
                 <br><br>
-                <textarea id="message" name="message" class="text_form" placeholder="Message" required></textarea>
-                <br>
-              <button class='registrate' type="submit" name="button" id="button_reg">Registrate</button>
+              <button class='registrate' type="submit" name="submit" id="button_reg">Registrate</button>
             </div>
             <div class="status"></div>
      </form>
